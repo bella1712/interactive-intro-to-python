@@ -15,6 +15,57 @@ Dieses Repository soll dir eine kurze Einführung in das Programmieren mit Pytho
 Python ist eine vielseitige, interpretierte Programmiersprache, die Anfang der 1990er Jahre von Guido van Rossum entwickelt wurde. Sie zeichnet sich durch eine klare, lesbare Syntax aus und unterstützt verschiedene Programmierparadigmen wie objektorientierte, funktionale und prozedurale Programmierung. Python wurde ursprünglich als Nachfolger der ABC-Sprache, welche nur 5 Grunddatentypen hatte und keine Variablendeklaration benötigte, konzipiert und hat sich seitdem zu einer der beliebtesten Programmiersprachen weltweit entwickelt. 
 
 ## Variablen
+Variablen kannst du dir wie kleine Boxen oder Container vorstellen, die einen Inhalt speichern können. Sie werden beim Programmieren verwendet, damit du nicht immer explizite Werte angeben musst und variabel programmieren kannst. 
+Wenn du beispielsweise zu Hause ein Glas hast, aus dem du trinkst, dann musst du auch nicht vorher bestimmen, ob da nur Wasser herein kommt, sondern du kannst auch andere Getränke wie Saft hineinfüllen. Ähnlich ist das mit Variablen. 
+Das oben genannte Beispiel sieht in Pyhton so aus:
+```
+glas = "Wasser"
+print(glas)
+# Ausgabe: Wasser
+
+glas = "Saft"
+print(glas)
+# Ausgabe: Saft
+```
+Varibalen können aber auch für Berechnungen verwendet werden. Angenommen ich möchte auf 5 Zählen, dann kann das in Python Code so aussehen:
+```
+zahl_init= 0
+zahl_1=1
+zahl_2=2
+zahl_3=3
+zahl_4=4
+zahl_5=5
+
+print(zahl_init, zahl_1, zahl_2 zahl_3, zahl_4, zahl_5)
+# Ausgabe: 0 1 2 3 4 5 
+```
+Das ist allerding sehr umständlich, vorallem, wenn du später mit Schleifen arbeitest. Daher wird oft folgende Vorgehensweise verwendet:
+```
+zahl = 0
+print(zahl)
+# Ausgabe: 0
+
+zahl = zahl + 1
+print(zahl)
+# Ausgabe: 1
+
+zahl = zahl + 1
+print(zahl)
+# Ausgabe: 2
+
+zahl = zahl + 1
+print(zahl)
+# Ausgabe: 3
+
+zahl = zahl + 1
+print(zahl)
+# Ausgabe: 4
+
+zahl = zahl + 1
+print(zahl)
+# Ausgabe: 5
+```
+Du kannst also den Wert ein Variable mit dem Wert der Variable verändern. 
 
 ## Datentypen :page_facing_up:
 Du kannst dir Datentpyen wie eine Unterteilung verschiedener Kategorien vorstellen. Stell dir deinen Alltag vor:
@@ -46,22 +97,22 @@ Wenn du programmierst, musst du deinem Programm sagen, was es machen soll. Da Pr
 Operatoren werden verwendet um Zuweisungen zu machen oder Mathematische oder vergeleichende Operationen auszuführen.
 
 ### Zuweisende Operatoren :arrow_right:
-|Operator|	Beispiel|	Das Gleiche wie	|
-|:---:|---|---|
-|=|	x = 5|	x = 5	|
-|+=	|x += 3	|x = x + 3	|
-|-=	|x -= 3	|x = x - 3	|
-|*=	|x *= 3	|x = x * 3	|
-|/=	|x /= 3	|x = x / 3	|
-|%=	|x %= 3	|x = x % 3	|
-|//=	|x //= 3	|x = x // 3	|
-|**=	|x **= 3	|x = x ** 3	|
-|&=	x |&= 3	|x = x & 3	|
-|&#124;=|	x &#124;= 3	|x = x &#124; 3	|
-|^=	|x ^= 3	|x = x ^ 3	|
-|>>=	|x >>= 3	|x = x >> 3	|
-|<<=|	x <<= 3	|x = x << 3	|
-|:=|	print(x := 3)	|x = 3 print(x)|
+|Operator|	Beispiel|	Das Gleiche wie	| Beschreibung der Zuweisung|Rechenbeispiel mit x = 5 |
+|:---:|:---|:---|:---|:---|
+|=|	x = 5|	x = 5	|x hat den Wert 5| keine Rechnung |
+|+=	|x += 3	|x = x + 3	|x hat den Wert von (x + 3) |x = 5 + 3 &rarr; x = 8|
+|-=	|x -= 3	|x = x - 3	|x hat den Wert von (x - 3) |x = 5 - 3 &rarr; x = 2|
+|*=	|x *= 3	|x = x * 3	|x hat den Wert von (x * 3)|x = 5 * 3 &rarr; x = 2|
+|/=	|x /= 3	|x = x / 3	|x hat den Wert von (x / 3)|x = 5 / 3 &rarr; x = 2|
+|%=	|x %= 3	|x = x % 3	|x hat den Wert des Rests von (x / 3)|x = 5 % 3 &rarr; x = 2 weil 5 /3 (bzw. 5//3) ist gleich 1 mit Rest 2|
+|//=	|x //= 3	|x = x // 3	|x hat den Wert der Ganzzahldivision von (x / 3)|x = 5 // 3 &rarr; x = 1 weil die 3 nur 1 Mal ganz in die 5 passt|
+|**=	|x **= 3	|x = x ** 3	|x hat den Wert von x^{3}|x = 5 ** 3 &rarr; x =  125|
+|&=	x |&= 3	|x = x & 3	|x hat den Wert der bitweisen Andoperation von x & 3|x = 5 & 3 &rarr; x = 1 <br>Weil 5 binär = 101 und 3 binär 11 ist. Die And-Operation ergibt 1 weil 101 and 011 ist 001, was gleich 1 ist|
+|&#124;=|	x &#124;= 3	|x = x &#124; 3	|x hat den Wert der bitweisen Andoperation von x or 3|x = 5 &#124; 3 &rarr; x =7 <br>Weil 101 or 11 = 111, was gleich 7 ist |
+|^=	|x ^= 3	|x = x ^ 3	|x hat den Wert einer bitweise XOR Operation von x und 3|x = 5 ^ 3 &rarr; x = 6 <br>Weil 101 XOR 011 = 110 was gleich 6 ist|
+|>>=	|x >>= 3	|x = x >> 3	|x hat den Wert einer Bitverschiebung nach rechts um 3 Stellen|x = 5 >> 3 &rarr; x = 0 <br>Weil 0101 um 3 Stellen nach Rechts verschoben 0000 ist, was gleich 0 ist|
+|<<=|	x <<= 3	|x = x << 3	|x hat den Wert einer Bitverschiebung nach links um 3 Stellen)|x = 5 << 3 &rarr; x = 40 <br>Weil 0000101 um 3 Stellen nach links verschoben 101000 ist, was 40 ist|
+|:=|	print(x := 3)	|x = 3 print(x)|x hat den Wert 3|x hat den Wert von 3|keine Rechnung|
 
 ### Mathematische Operatoren :1234:
 |Operator|	Name	|Beispiel|
