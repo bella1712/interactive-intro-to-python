@@ -5,6 +5,7 @@ class Schleifen:
         st.markdown(''' Du hast bis jetzt schon viele Grundlagen der Programmierung kennengelernt, aber um ein funktionierendes Programm schreiben zu können brauchst du noch das Wissen, was Schleifen sind. Generell erleichtern dir Schleifen das leben, weil sie es dir ermöglichen die Anzahl an Wiederholungen zu definieren. Das passiert entweder dadurch, dass du eine exakte Anzahl an Wiederholungen oder eine Abbruchbedingung definierst.
             Angenommen du hast 10 Mitschüler und du wünscht jedem einen guten Morgen. Nun sollst du diese Tätigkeit des Grüssens dokumentieren. Würdest du dann schreiben "Ich habe gesagt 'Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen.'"? Nein, oder?
             Du würdest schreiben "Ich habe 10 mal 'Guten Morgen' gesagt."
+            In einem Programm musst du allerdings die 10fache Wiederholung durchführen und dafür verwendet man Schleifen: Dadurch ersparst du dir die Arbeit den Schritt mehrfach auszuführen und kannst alles in einer Struktur zusammenfassen.
             Beim Programmieren ist das genauso. Das oben genannte Beispiel sieht in Python folgendermassen aus:''')
         st.markdown('''
             ```
