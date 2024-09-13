@@ -112,7 +112,7 @@ Operatoren werden verwendet um Zuweisungen zu machen oder Mathematische oder ver
 |^=	|x ^= 3	|x = x ^ 3	|x hat den Wert einer bitweise XOR Operation von x und 3|x = 5 ^ 3 &rarr; x = 6 <br>Weil 101 XOR 011 = 110 was gleich 6 ist|
 |>>=	|x >>= 3	|x = x >> 3	|x hat den Wert einer Bitverschiebung nach rechts um 3 Stellen|x = 5 >> 3 &rarr; x = 0 <br>Weil 0101 um 3 Stellen nach Rechts verschoben 0000 ist, was gleich 0 ist|
 |<<=|	x <<= 3	|x = x << 3	|x hat den Wert einer Bitverschiebung nach links um 3 Stellen)|x = 5 << 3 &rarr; x = 40 <br>Weil 0000101 um 3 Stellen nach links verschoben 101000 ist, was 40 ist|
-|:=|	print(x := 3)	|x = 3 print(x)|x hat den Wert 3|keine Rechnung|
+|:=|	print(x:=3)	|x = 3 print(x)|x hat den Wert 3|keine Rechnung|
 
 ### Mathematische Operatoren :1234:
 |Operator|	Name	|Beispiel|
