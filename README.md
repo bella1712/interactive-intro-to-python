@@ -104,8 +104,8 @@ Operatoren werden verwendet um Zuweisungen zu machen oder Mathematische oder ver
 |-=	|x -= 3	|x = x - 3	|x hat den Wert von (x - 3) |x = 5 - 3 &rarr; x = 2|
 |*=	|x *= 3	|x = x * 3	|x hat den Wert von (x * 3)|x = 5 * 3 &rarr; x = 2|
 |/=	|x /= 3	|x = x / 3	|x hat den Wert von (x / 3)|x = 5 / 3 &rarr; x = 2|
-|%=	|x %= 3	|x = x % 3	|x hat den Wert des Rests von (x / 3)|x = 5 % 3 &rarr; x = 2 weil 5 /3 (bzw. 5//3) ist gleich 1 mit Rest 2|
-|//=	|x //= 3	|x = x // 3	|x hat den Wert der Ganzzahldivision von (x / 3)|x = 5 // 3 &rarr; x = 1 weil die 3 nur 1 Mal ganz in die 5 passt|
+|%=	|x %= 3	|x = x % 3	|x hat den Wert des Rests von (x / 3)|x = 5 % 3 &rarr; x = 2 <br>Weil 5 /3 (bzw. 5//3) ist gleich 1 mit Rest 2|
+|//=	|x //= 3	|x = x // 3	|x hat den Wert der Ganzzahldivision von (x / 3)|x = 5 // 3 &rarr; x = 1 <br>Weil die 3 nur 1 Mal ganz in die 5 passt|
 |**=	|x **= 3	|x = x ** 3	|x hat den Wert von x^{3}|x = 5 ** 3 &rarr; x =  125|
 |&=	x |&= 3	|x = x & 3	|x hat den Wert der bitweisen Andoperation von x & 3|x = 5 & 3 &rarr; x = 1 <br>Weil 5 binär = 101 und 3 binär 11 ist. Die And-Operation ergibt 1 weil 101 and 011 ist 001, was gleich 1 ist|
 |&#124;=|	x &#124;= 3	|x = x &#124; 3	|x hat den Wert der bitweisen Andoperation von x or 3|x = 5 &#124; 3 &rarr; x =7 <br>Weil 101 or 11 = 111, was gleich 7 ist |
