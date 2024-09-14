@@ -4,7 +4,6 @@ class Info:
     def display_intro(self):
         st.title("Interaktive Einführung in Python :snake:")
         st.write("Dieses Repository soll dir eine kurze Einführung in das Programmieren mit Python geben. Du wirst lernen, welche Datentypen und Operatoren es gibt und wofür sie da sind. Ausserdem werdet wirst du lernen, was Variablen, Kontrollstrukturen und Schleifen sind. ")
-        st.write("Hi Thoma")
         st.markdown('''
             ## Lernziele :mortar_board:
             - Du lernst Python kennen und weisst wofür man diese Programmiersprache braucht
