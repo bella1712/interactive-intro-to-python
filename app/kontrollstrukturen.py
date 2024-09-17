@@ -1,4 +1,5 @@
 import streamlit as st
+from execbox import execbox
 class Kontrollstrukturen:
     def display_intro(self):
         st.markdown('''# Kontrollstrukturen :passport_control:''')
@@ -29,5 +30,24 @@ class Kontrollstrukturen:
             else:
               countinue
             ```''')
+    def exercise_1(self):
+        # Initial dataframe
+        st.markdown('''#### Übung zu den Kontrollstrukturen :balloon:''')
+        st.markdown(
+            '''Du findest unten ein funktionierendes Beispiel einer Kontrollstruktur. Spiele damit und mit den verschiedenen Werten herum, um herauszufinden, wie sie funktioniert. Sollte die Syntax nicht mehr korrekt sein, lies die Fehlernachricht und versuche mir ihrer Hilfe den Fehler zu beheben. Sobald du Änderungen am Code vorgenommen hast, klicke auf den Apply- und auf den Run-Button um die Änderung sehen zu können. ''')
+
+        execbox("""
+        import streamlit as st
+name=""
+if name=="":
+    st.write("Bitte gib der Variable name einen Wert.")
+elif name=="Max":
+    st.write("Der name ist Max")
+else: 
+    st.write("Der name ist nicht '' und auch nicht Max.")
+                        """)
     def __main__(self):
         self.display_intro()
+        on = st.toggle("Übe den Umgang mit Kontrollstrukturen")
+        if on:
+            self.exercise_1()

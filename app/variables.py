@@ -1,10 +1,13 @@
+from builtins import str
+
 import streamlit as st
 class Variables:
     def display_intro(self):
         st.title("Variablendeklaration")
         st.markdown('''## Variablen :wine_glass:''')
-        st.markdown(''' Variablen kannst du dir wie kleine Boxen oder Container vorstellen, die einen Inhalt speichern können. Sie werden beim Programmieren verwendet, damit du nicht immer explizite Werte angeben musst und variabel programmieren kannst. 
-            Wenn du beispielsweise zu Hause ein Glas hast, aus dem du trinkst, dann musst du auch nicht vorher bestimmen, ob da nur Wasser herein kommt, sondern du kannst auch andere Getränke wie Saft hineinfüllen. Ähnlich ist das mit Variablen. 
+        st.markdown('''Was ist eine Variable? Du kannst dir wie kleine Boxen oder Container vorstellen, die einen Inhalt speichern können. Sie werden beim Programmieren verwendet, damit du nicht immer explizite Werte angeben musst und variabel programmieren kannst. Variablen sind sehr wichtig beim Programmieren, daher ist es auch wichtig ihnen einen sprechenden Namen zu geben. Der Inhalt der Variable ist zwar veränderlich, der Zweck ist aber in der Regel sicher. Daher benenne sie am besten auch danach. Als Beipsiel: 
+            Zu Hause hast du Gläser, aus denen du trinken kannst. Das Glas ist ein Behälter für verschiedenen Flüssigkeiten: bevor du ein Glas kaufst musst du nicht wissen, ob du Wasser, Softdrinks, Cola oder irgendetwas anderes daraus trinken möchtest. Der Inhalt des Glases ist also variabel, die Funktion oder der Zweck des Glases ist aber immer gleich: Das Glas ist ein Auffangbehälter für Flüssigkeit.  
+            Das Glas ist also in diesem Fall die Variable.
             Das oben genannte Beispiel sieht in Pyhton so aus:''')
 
         st.markdown('''    
@@ -17,6 +20,11 @@ class Variables:
             print(glas)
             # Ausgabe: Saft
             ```''')
+        st.write("Variablen werden immer klein geschrieben. Das ist eine Namenskonvention, an die du dich halten solltest, damit der Code übersichtlich und verständlich bleibt. ")
+        on_1 = st.toggle("Versuche selbst eine Variable zu deklarieren")
+        if on_1:
+            self.exercise_1()
+        st.markdown('''#### Variablendeklaration''')
         st.markdown('''Varibalen können aber auch für Berechnungen verwendet werden. Angenommen ich möchte auf 5 Zählen, dann kann das in Python Code so aussehen:''')
         st.markdown('''
             ```
@@ -57,7 +65,51 @@ class Variables:
             # Ausgabe: 5
             ```''')
         st.markdown('''Du kannst also den Wert ein Variable mit dem Wert der Variable verändern. ''')
+        on_2 = st.toggle("Wende dein gelerntes Wissen an")
+        if on_2:
+            self.exercise_2()
+    def exercise_1(self):
+        st.markdown('''#### Übung 1 zur Variablendeklaration :balloon:''')
+        st.markdown('''Deklariere eine Variable mit dem Namen **programmiersprache** und dem Wert **"Python"**''')
+        options = st.multiselect(
+            "Wie sieht die Variablen Deklaration aus",
+            ['"','"', "programmiersprache", "Python", "="],
+        )
+        if options == []:
+            st.write("")
+        elif len(options)!=4:
+            st.write("Bitte benutze alle Elemente aus dem Dropdown um die Variable zu deklarieren")
+        else:
+            if options == ["programmiersprache", "=", '"',"Python",'"']:
+                st.write("Das stimmt :white_check_mark: Die Deklaration sieht wie folgt aus: ")
+                st.markdown('''```programmiersprache = "Python" ```''')
+            else:
+                st.write("Leider nicht :x: Probiere es weiter.")
+            sneek_peek=st.checkbox("Falls du dir nicht sicher bist, findest du hier die Lösung")
+            if sneek_peek:
+                st.markdown('''Die Lösung ist: ```programmiersprache = "Python" ```''')
+    def exercise_2(self):
+        st.markdown('''#### Übung 2 zur Variablendeklaration :balloon:''')
+        st.markdown('''Weise der Variable **zahl** den Wert 7 zu.''')
+        declaration= st.text_input("Deklaration")
+        if declaration.split()==["zahl", "=", "7"] or declaration.split()==["zahl=", "7"] or declaration.split()==["zahl", "=7"] or declaration.split()==["zahl=7"]:
+            st.write("Sehr gut, das stimmt :white_check_mark:")
+            st.write("Da du die Deklaration der Variable gemeistert hast, kannst du sie nun auch verändern")
+            self.exercise_3()
 
+        else:
+            st.write("Das ist leider nicht korrekt :x: Denke daran, dass Variablen klein geschreiben werden sollten. ")
+    def exercise_3(self):
+        st.markdown('''#### Übung 3 zur Variablendeklaration :balloon:''')
+        st.markdown('''Addiere nun **13** zu **zahl** hinzu und speichere den neuen Wert auch wieder in der Variable **zahl**''')
+        addition=st.text_input("Addition")
+        if addition.split()==["zahl", "=", "zahl", "+", "13"] or addition.split()==["zahl=", "zahl", "+", "13"] or addition.split()==["zahl=zahl", "+", "13"]  or addition.split()==["zahl=" , "zahl", "+", "13"] or addition.split()==["zahl=" , "zahl+", "13"]or addition.split()==["zahl=" , "zahl+13"] or addition.split()==["zahl=zahl", "+", "13"] or addition.split()==["zahl=zahl", "+13"]or addition.split()==["zahl=zahl+", "13"] or  addition.split()==["zahl=zahl+13"] or addition.split()==["zahl", "=", "zahl", "+13"] or addition.split()==["zahl", "=", "zahl+13"] or addition.split()==["zahl", "=zahl+13"] or addition.split()==["zahl", "=", "13", "+", "zahl"] or addition.split()==["zahl=", "13", "+", "zahl"] or addition.split()==["zahl=", "13+", "zahl"] or addition.split()==["zahl=", "13+zahl"]or addition.split()==["zah=13", "+", "zahl"] or addition.split()==["zah=13", "+zahl"]or  addition.split()==["zahl=13+", "zahl"] or addition.split()==["zahl=13+zahl"] or addition.split()==["zahl", "=", "13", "+zahl"] or addition.split()==["zahl", "=", "13+zahl"] or addition.split()==["zahl", "=13+zahl"]or addition.split()==["zahl", "+=" , "13"] or addition.split()==["zahl+=" , "13"] or addition.split()==["zahl+=13"]or addition.split()==["zahl", "+=13"]:
+            st.write("Wow, du lernst echt schnell! Deine Antwort ist richtig :white_check_mark:")
+        else:
+            st.write("Leider falsch :x: Versuche es gerne weiter ")
+        on =st.toggle("Falls du nicht weiter kommst, findest du hier die Lösung")
+        if on:
+            st.markdown('''Die Lösung ist ```zahl = zahl + 13```''')
 
     def __main__(self):
         self.display_intro()

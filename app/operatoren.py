@@ -1,4 +1,8 @@
 import streamlit as st
+from streamlit_ace import st_ace
+from code_editor import code_editor
+from streamlit_monaco import st_monaco
+from execbox import execbox
 class Operatoren:
     def display_intro_1(self):
         st.title("Operatoren :thought_balloon:")
@@ -49,7 +53,55 @@ class Operatoren:
             |>=|	Grösser oder gleich wie|	x >= y|
             <=	|Grösser oder gleich wie|x <= y|
             ''')
+
+    def exercise_1(self):
+        st.markdown('''#### Übung zu den zuweisenden Operatoren :balloon:''')
+        st.markdown('''In dem folgenden Feld kannst du die Werte für a und b beliebig anpassen und auch die Zuweisung im ```st.write()``` Feld beliebig anpassen. Spiele gerne herum und schau dir an, wie sich das Ergebnis verändert. Um das Ergebnis zu sehen, klicke erst auf den Apply- und danach auf den Run-Button. Bitte entferne keinen Code, da es sonst sein kann, dass das Programm nicht mehr funktionert. Ausserdem pass bitte darauf auf, dass alle COdezeilen gleich eingerückt sind. Sollte dennoch etwas schief gehen, nimm dir die Zeit und lies die Fehlermeldung. Sie hilft dir deinen Fehler zu identifizieren und zu beheben.''')
+        # Draw an execbox with some initial text.
+        execbox("""
+        import streamlit as st
+a = 10
+b = 20
+st.write("a: ", a ," b: ", b)
+    """)
+
+    def exercise_2(self):
+        st.markdown('''#### Übung zu den mathematischen Operatoren :balloon:''')
+        st.markdown('''In dem folgenden Feld kannst du die Werte für a und b beliebig anpassen und auch die Zuweisung im ```st.write()``` Feld beliebig anpassen. Spiele gerne herum und schau dir an, wie sich das Ergebnis verändert. Um das Ergebnis zu sehen, klicke erst auf den Apply- und danach auf den Run-Button. Bitte entferne keinen Code, da es sonst sein kann, dass das Programm nicht mehr funktionert. Ausserdem pass bitte darauf auf, dass alle COdezeilen gleich eingerückt sind. Sollte dennoch etwas schief gehen, nimm dir die Zeit und lies die Fehlermeldung. Sie hilft dir deinen Fehler zu identifizieren und zu beheben.''')
+        # Draw an execbox with some initial text.
+        execbox("""
+        import streamlit as st
+a = 10
+b = 20
+st.write("Resultat: ", a+b)
+    """)
+
+
+
+    def exercise_3(self):
+        st.markdown('''#### Übung zu den Vergleichsoperatoren :balloon:''')
+        st.markdown(
+            '''In dem folgenden Feld kannst du die Werte für a und b beliebig anpassen und auch die Zuweisung im ```st.write()``` Feld beliebig anpassen. Spiele gerne herum und schau dir an, wie sich das Ergebnis verändert. Um das Ergebnis zu sehen, klicke erst auf den Apply- und danach auf den Run-Button. Bitte entferne keinen Code, da es sonst sein kann, dass das Programm nicht mehr funktionert. Ausserdem pass bitte darauf auf, dass alle COdezeilen gleich eingerückt sind. Sollte dennoch etwas schief gehen, nimm dir die Zeit und lies die Fehlermeldung. Sie hilft dir deinen Fehler zu identifizieren und zu beheben. ''')
+        # Draw an execbox with some initial text.
+        execbox("""
+        import streamlit as st
+a = 10
+b = 20
+st.write("Resultat: ", a==b)
+    """)
+
+        # EXAMPLE CODE
+
     def __main__(self):
         self.display_intro_1()
+        on_1=st.toggle("Übe die zuweisenden Operatoren")
+        if on_1:
+            self.exercise_1()
         self.display_intro_2()
+        on_2 = st.toggle("Übe die mathematischen Operatoren")
+        if on_2:
+            self.exercise_2()
         self.display_intro_3()
+        on_3 = st.toggle("Übe die Vergleichsoperatoren")
+        if on_3:
+            self.exercise_3()

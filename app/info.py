@@ -20,7 +20,7 @@ class Info:
               ''')
         st.markdown('''
             ## Dein erstes Python Programm :triangular_flag_on_post:
-            Da du jetzt die Grundlagen der Programmierung mit Python kennst, wird es Zeit dein erstes Programm zu programmieren. Denn wirklich gut im Programmeieren kannst du nur mit viel **Übung** werden. Also leg los und viel Spass!
+            In diesem kleinen Kurs wirst du die Grundlagen der Pythonprogrammierung kennenlernen. Nachdem du das geschafft hast, wird es Zeit dein erstes Programm zu programmieren. Denn wirklich gut im Programmeieren kannst du nur mit viel **Übung** werden. Also leg los und viel Spass!
               ''')
 
 

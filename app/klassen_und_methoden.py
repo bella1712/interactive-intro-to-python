@@ -28,6 +28,12 @@ class Klassen_und_Methoden:
               pass
             ```
             ''')
-
+    def show_video(self):
+        st.markdown("### Falls du Klassen und Methoden noch genauer erklärt bekommen möchtest, dann schaue dir gerne dieses Video an.")
+        st.video("https://www.youtube.com/watch?v=i1uQgU7NOCw")
+        st.write("Dieses [Video](https://www.youtube.com/watch?v=i1uQgU7NOCw) ist vom YouTube Kanal Coding Crashkurse")
     def __main__(self):
         self.display_intro_teil_1()
+        toggle=st.toggle("Zeige das Lernvideo")
+        if toggle:
+            self.show_video()
