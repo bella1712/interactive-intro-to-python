@@ -94,14 +94,14 @@ st.write("Resultat: ", a==b)
 
     def __main__(self):
         self.display_intro_1()
-        on_1=st.toggle("Übe die zuweisenden Operatoren")
+        on_1=st.toggle("Übe die zuweisenden Operatoren :balloon:")
         if on_1:
             self.exercise_1()
         self.display_intro_2()
-        on_2 = st.toggle("Übe die mathematischen Operatoren")
+        on_2 = st.toggle("Übe die mathematischen Operatoren :balloon:")
         if on_2:
             self.exercise_2()
         self.display_intro_3()
-        on_3 = st.toggle("Übe die Vergleichsoperatoren")
+        on_3 = st.toggle("Übe die Vergleichsoperatoren :balloon:")
         if on_3:
             self.exercise_3()

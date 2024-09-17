@@ -34,6 +34,6 @@ class Klassen_und_Methoden:
         st.write("Dieses [Video](https://www.youtube.com/watch?v=i1uQgU7NOCw) ist vom YouTube Kanal Coding Crashkurse")
     def __main__(self):
         self.display_intro_teil_1()
-        toggle=st.toggle("Zeige das Lernvideo")
+        toggle=st.toggle("Zeige ein zusätzliches Lernvideo :balloon:")
         if toggle:
             self.show_video()

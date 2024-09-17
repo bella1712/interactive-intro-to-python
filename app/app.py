@@ -46,6 +46,6 @@ page_names_to_funcs = {
 
 
 }
-task_name = st.sidebar.selectbox("Bitte wähle eine Seite aus", page_names_to_funcs.keys())
+task_name = st.sidebar.selectbox("Bitte wähle eine Seite aus :balloon:", page_names_to_funcs.keys())
 page_names_to_funcs[task_name]()
 

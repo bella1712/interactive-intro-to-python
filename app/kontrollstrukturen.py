@@ -48,6 +48,6 @@ else:
                         """)
     def __main__(self):
         self.display_intro()
-        on = st.toggle("Übe den Umgang mit Kontrollstrukturen")
+        on = st.toggle("Übe den Umgang mit Kontrollstrukturen :balloon:")
         if on:
             self.exercise_1()

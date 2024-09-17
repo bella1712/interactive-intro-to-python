@@ -21,7 +21,7 @@ class Variables:
             # Ausgabe: Saft
             ```''')
         st.write("Variablen werden immer klein geschrieben. Das ist eine Namenskonvention, an die du dich halten solltest, damit der Code übersichtlich und verständlich bleibt. ")
-        on_1 = st.toggle("Versuche selbst eine Variable zu deklarieren")
+        on_1 = st.toggle("Versuche selbst eine Variable zu deklarieren :balloon:")
         if on_1:
             self.exercise_1()
         st.markdown('''#### Variablendeklaration''')
@@ -65,7 +65,7 @@ class Variables:
             # Ausgabe: 5
             ```''')
         st.markdown('''Du kannst also den Wert ein Variable mit dem Wert der Variable verändern. ''')
-        on_2 = st.toggle("Wende dein gelerntes Wissen an")
+        on_2 = st.toggle("Wende dein gelerntes Wissen an :balloon:")
         if on_2:
             self.exercise_2()
     def exercise_1(self):

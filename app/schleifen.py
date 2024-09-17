@@ -15,7 +15,7 @@ class Schleifen:
               print("Guten Morgen")
             ```
             ''')
-        on_1 = st.toggle("Übe For-Loops")
+        on_1 = st.toggle("Übe For-Loops :balloon:")
         if on_1:
             self.exercise_1()
     def display_info_2(self):
@@ -44,7 +44,7 @@ class Schleifen:
             print("Guten Morgen ", liste_mitschueler[j])
         ```
             ''')
-        on_2 = st.toggle("Übe While-Loops")
+        on_2 = st.toggle("Übe While-Loops :balloon:")
         if on_2:
             self.exercise_3()
     def display_info_3(self):
@@ -64,7 +64,7 @@ class Schleifen:
                 break
         ```
             ''')
-        on_3 = st.toggle("Übe Do-While-Loops")
+        on_3 = st.toggle("Übe Do-While-Loops :balloon:")
         if on_3:
             self.exercise_4()
 
@@ -83,7 +83,7 @@ for i in range(0,3):
     st.write("Hallo" ,i)
 st.write ("i ist gleich: ", i)
     """)
-        on = st.toggle("Hier findest du noch eine andere Art des For-Loops")
+        on = st.toggle("Hier findest du noch eine andere Art des For-Loops :balloon:")
         if on:
             self.exercise_2()
 

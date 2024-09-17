@@ -129,11 +129,11 @@ class Datentypen:
 
     def __main__(self):
         self.display_intro_teil_1()
-        on_1 = st.toggle("Zeige die Übungsaufgaben zu den primitiven Datentypen")
+        on_1 = st.toggle("Zeige die Übungsaufgaben zu den primitiven Datentypen :balloon:")
         if on_1:
             self.exercise_1()
         self.display_intro_teil_2()
-        on_2= st.toggle("Zeige die Übungsaufgaben zu den nicht-primitiven Datentypen")
+        on_2= st.toggle("Zeige die Übungsaufgaben zu den nicht-primitiven Datentypen :balloon:")
         if on_2:
             self.exercise_2()
 
