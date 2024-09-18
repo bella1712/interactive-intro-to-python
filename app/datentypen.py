@@ -18,7 +18,7 @@ class Datentypen:
         |  Boolean | Hat die Werte *True* oder *False* und wird oft für Entscheidungen verwendet. Mehr dazu findest du im Kapitel Kontrollstrukturen und Schleifen| bool_1=True, bool_2=False|
         | Integer  | Repräsentiert eine ganze Zahl. |integer=2|
         |Float| Repräsentiert eine Fliesskommazahl  |float_1=2.0, float_2=2f |
-        |String | Repräsentiert ein Zeichen oder eine Zeichenkette und muss immer in Anführungszeichen gesetzt werden |string_1='Hello',  string_2="World!"|
+        |String | Repräsentiert ein Zeichen oder eine Zeichenkette und muss immer in Anführungszeichen gesetzt werden. Eigentlich handelt es sich bei einem String um ein Objekt, dennoch wird der String wie ein primitiver Datentyp initialisiert. |string_1='Hello',  string_2="World!"|
         ''')
 
     def display_intro_teil_2(self):
