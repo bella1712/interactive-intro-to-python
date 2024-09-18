@@ -1,7 +1,4 @@
 import streamlit as st
-from streamlit_ace import st_ace
-from code_editor import code_editor
-from streamlit_monaco import st_monaco
 from execbox import execbox
 class Operatoren:
     def display_intro_1(self):
