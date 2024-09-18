@@ -3,7 +3,7 @@ from info import Info
 from variables import Variables
 from datentypen import Datentypen
 from operatoren import Operatoren
-from klassen_und_methoden import  Klassen_und_Methoden
+from klassen_und_methoden import Klassen_und_Methoden
 from kontrollstrukturen import Kontrollstrukturen
 from schleifen import Schleifen
 

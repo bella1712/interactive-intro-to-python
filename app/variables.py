@@ -1,5 +1,3 @@
-from builtins import str
-
 import streamlit as st
 class Variables:
     def display_intro(self):
