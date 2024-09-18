@@ -79,7 +79,7 @@ class Variables:
         )
         if options == []:
             st.write("")
-        elif len(options)!=4:
+        elif len(options)<4:
             st.write("Bitte benutze alle Elemente aus dem Dropdown um die Variable zu deklarieren")
         else:
             if options == ["programmiersprache", "=", '"',"Python",'"']:
