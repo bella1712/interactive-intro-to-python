@@ -8,7 +8,6 @@ from kontrollstrukturen import Kontrollstrukturen
 from schleifen import Schleifen
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
 from htbuilder.units import percent, px
-from htbuilder.funcs import rgba, rgb
 
 info = Info()
 variables =Variables()
@@ -106,16 +105,6 @@ def footer():
         link("https://github.com/bella1712", "Isabella Freitag"),
     ]
     layout(*myargs)
-
-# Add your custom footer
-#st.markdown(
-#    """
-#    <div style='position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 10px; background-color: #f0f2f6;'>
-#        Made with ❤️ by <a href="https://github.com/bella1712/">Isabella Freitag</a>
-#    </div>
-#    """,
-#    unsafe_allow_html=True
-#)
 
 page_names_to_funcs = {
     "Informationsseite": info.display_intro,
