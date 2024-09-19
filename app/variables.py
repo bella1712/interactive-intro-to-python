@@ -10,13 +10,13 @@ class Variables:
 
         st.markdown('''    
         ```
-            glas = "Wasser"
-            print(glas)
-            # Ausgabe: Wasser
-            
-            glas = "Saft"
-            print(glas)
-            # Ausgabe: Saft
+        glas = "Wasser"
+        print(glas)
+        # Ausgabe: Wasser
+         
+        glas = "Saft"
+        print(glas)
+        # Ausgabe: Saft
         ```
         ''')
         st.write("Variablen werden immer klein geschrieben. Das ist eine Namenskonvention, an die du dich halten solltest, damit der Code übersichtlich und verständlich bleibt. ")
@@ -27,43 +27,43 @@ class Variables:
         st.markdown('''Varibalen können aber auch für Berechnungen verwendet werden. Angenommen ich möchte auf 5 Zählen, dann kann das in Python Code so aussehen:''')
         st.markdown('''
         ```
-            zahl_init= 0
-            zahl_1=1
-            zahl_2=2
-            zahl_3=3
-            zahl_4=4
-            zahl_5=5
-            
-            print(zahl_init, zahl_1, zahl_2 zahl_3, zahl_4, zahl_5)
-            # Ausgabe: 0 1 2 3 4 5 
+        zahl_init= 0
+        zahl_1=1
+        zahl_2=2
+        zahl_3=3
+        zahl_4=4
+        zahl_5=5
+                    
+        print(zahl_init, zahl_1, zahl_2 zahl_3, zahl_4, zahl_5)
+        # Ausgabe: 0 1 2 3 4 5 
         ```
         ''')
         st.markdown('''Das ist allerding sehr umständlich, vorallem, wenn du später mit Schleifen arbeitest. Daher wird oft folgende Vorgehensweise verwendet:''')
         st.markdown('''    
         ```
-            zahl = 0
-            print(zahl)
-            # Ausgabe: 0
+        zahl = 0
+        print(zahl)
+        # Ausgabe: 0
+                    
+        zahl = zahl + 1
+        print(zahl)
+        # Ausgabe: 1
+        
+        zahl = zahl + 1
+        print(zahl)
+        # Ausgabe: 2
+    
+        zahl = zahl + 1
+        print(zahl)
+        # Ausgabe: 3
+    
+        zahl = zahl + 1
+        print(zahl)
+        # Ausgabe: 4
             
-            zahl = zahl + 1
-            print(zahl)
-            # Ausgabe: 1
-            
-            zahl = zahl + 1
-            print(zahl)
-            # Ausgabe: 2
-            
-            zahl = zahl + 1
-            print(zahl)
-            # Ausgabe: 3
-            
-            zahl = zahl + 1
-            print(zahl)
-            # Ausgabe: 4
-            
-            zahl = zahl + 1
-            print(zahl)
-            # Ausgabe: 5
+        zahl = zahl + 1
+        print(zahl)
+        # Ausgabe: 5
         ```
             ''')
         st.markdown('''Du kannst also den Wert ein Variable mit dem Wert der Variable verändern. ''')

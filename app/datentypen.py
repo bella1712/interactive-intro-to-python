@@ -29,7 +29,7 @@ class Datentypen:
             |  List |Ein Liste die Elemente aus verschiedenen Datentypen enthalten kann   |list = []|
             |  Tuple | Funktioniert ähnlich wie eine Liste, ist aber unveränderlich  |tuple = ()|
             | Dictionary | Ein Datentyp in dem Key-Value Paare gespeichert werden. Beispiel: "Name": "Max Muster"  |dict = {key : value}|
-            | Set  |Ähnlich wie die Liste. Allerdings ist ein Set ungeordnet, unveränderlich und hat keinen Index |set = {}|
+            | Set  |Ähnlich wie die Liste. Allerdings ist ein Set ungeordnet, unveränderlich und hat keinen Index. Des Weiteren dürfen Elemente in einem Set nicht doppelt vorkommen |set = set()|
             |Array   | Funktioniert wie eine Liste, da Python eigentlich keinen Array support hat. Daher werden prinzipiell Listen verwendet  |arr = []|
            ''')
 
