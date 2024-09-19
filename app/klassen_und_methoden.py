@@ -17,15 +17,15 @@ class Klassen_und_Methoden:
                 self.klassenlehrer = klassenlehrer
                 self.schueler = schueler
             
-            def lernen():
-            # pass kannst du verwenden, wenn du noch keinen konkreten Code für die Methode hast
-              pass
+                def lernen():
+                # pass kannst du verwenden, wenn du noch keinen konkreten Code für die Methode hast
+                  pass
             
-            def tafel_putzen():
-              pass
+                def tafel_putzen():
+                pass
             
-            def stuehle_hochstellen():
-              pass
+                def stuehle_hochstellen():
+                pass
             ```
             ''')
     def show_video(self):

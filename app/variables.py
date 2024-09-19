@@ -1,4 +1,5 @@
 import streamlit as st
+import re
 class Variables:
     def display_intro(self):
         st.title("Variablendeklaration")
@@ -111,7 +112,10 @@ class Variables:
         if addition == None or addition =="":
             st.write("")
         else:
-            if addition.split()==["zahl", "=", "zahl", "+", "13"] or addition.split()==["zahl=", "zahl", "+", "13"] or addition.split()==["zahl=zahl", "+", "13"]  or addition.split()==["zahl=" , "zahl", "+", "13"] or addition.split()==["zahl=" , "zahl+", "13"]or addition.split()==["zahl=" , "zahl+13"] or addition.split()==["zahl=zahl", "+", "13"] or addition.split()==["zahl=zahl", "+13"]or addition.split()==["zahl=zahl+", "13"] or  addition.split()==["zahl=zahl+13"] or addition.split()==["zahl", "=", "zahl", "+13"] or addition.split()==["zahl", "=", "zahl+13"] or addition.split()==["zahl", "=zahl+13"] or addition.split()==["zahl", "=", "13", "+", "zahl"] or addition.split()==["zahl=", "13", "+", "zahl"] or addition.split()==["zahl=", "13+", "zahl"] or addition.split()==["zahl=", "13+zahl"]or addition.split()==["zah=13", "+", "zahl"] or addition.split()==["zah=13", "+zahl"]or  addition.split()==["zahl=13+", "zahl"] or addition.split()==["zahl=13+zahl"] or addition.split()==["zahl", "=", "13", "+zahl"] or addition.split()==["zahl", "=", "13+zahl"] or addition.split()==["zahl", "=13+zahl"]or addition.split()==["zahl", "+=" , "13"] or addition.split()==["zahl+=" , "13"] or addition.split()==["zahl+=13"]or addition.split()==["zahl", "+=13"]:
+            pattern_1= r"zahl\s*=\s*zahl\s*\+\s*13"
+            pattern_2= r"zahl\s*=\s*13\s*\+\s*zahl"
+            pattern_3= r"zahl\s*\+=\s*13"
+            if re.match(pattern_1, addition) or re.match(pattern_2, addition) or re.match(pattern_3, addition):
                 st.success("Wow, du lernst echt schnell! Deine Antwort ist richtig :white_check_mark:")
             else:
                 st.error("Leider falsch :x: Versuche es gerne weiter ")
