@@ -54,10 +54,10 @@ class Datentypen:
         if question_1==None:
             st.write("")
         elif question_1 == "**True** und **False**":
-            st.write("Richtig, in Python hat kann ein Boolean die Werte **True** und **False** haben :white_check_mark:")
+            st.success("Richtig, in Python hat kann ein Boolean die Werte **True** und **False** haben :white_check_mark:")
             st.session_state.disabled=True
         else:
-            st.write("Leider falsch. Probiere es gerne noch einmal :x:")
+            st.error("Leider falsch. Probiere es gerne noch einmal :x:")
     def question_2(self):
         question_2 = st.radio(
             "Welche Option ist kein String?",
@@ -68,7 +68,7 @@ class Datentypen:
         if question_2 == None:
             st.write("")
         elif question_2 == "**Hallo**":
-            st.write(
+            st.success(
                 "Sehr gut, **Hallo** hat keine Anführungszeichen und wird daher nicht als String erkannt  :white_check_mark:. ")
             st.write(
                 "Um einen String zu erstellen, musst du ihn mittels einfachen oder doppelten Anführungszeichen kennzeichen. Hier siehst du noch einmal ein Beispiel:")
@@ -81,7 +81,7 @@ class Datentypen:
                    ''')
             st.session_state.disabled = True
         else:
-            st.write("Leider falsch :x: Probiere es gerne noch einmal")
+            st.error("Leider falsch :x: Probiere es gerne noch einmal")
 
     def question_3(self):
         question_3 = st.number_input("Gib eine float Zahl zwischen 0.5 und 3.5 an.", value=None,
@@ -90,11 +90,11 @@ class Datentypen:
             st.write("")
         else:
             if question_3 >= 3.5:
-                st.write("Leider falsch :x: Die Zahl muss kleiner als 3.5 sein ")
+                st.error("Leider falsch :x: Die Zahl muss kleiner als 3.5 sein ")
             elif question_3 <= 0.5:
-                st.write("Leider falsch:x: Die Zahl muss grösser als 0.5 sein")
+                st.error("Leider falsch:x: Die Zahl muss grösser als 0.5 sein")
             else:
-                st.write(
+                st.success(
                     "Richtig. Denke daran, du kannst einen float entweder als Fliesskommazahl oder als Zahl mit einem kleinem f am Ende deklarieren :white_check_mark: ")
                 st.markdown('''
                        ```
@@ -112,10 +112,13 @@ class Datentypen:
             "Welche der genannten Datentypen sind *nicht primitive Datentypen* in Python?",
             ["Integer", "Liste", "Float", "String", "Tuple", "Dictionary","Boolean"],
         )
-        if sorted(solution) == sorted(options):
-            st.write("Korrekt. All diese Datentypen sind nicht primitive Datentypen :white_check_mark:")
+        if options ==[]:
+            st.write("")
         else:
-            st.write("Leider nicht :x: versuche es gerne weiter :x:")
+            if sorted(solution) == sorted(options):
+                st.success("Korrekt. All diese Datentypen sind nicht primitive Datentypen :white_check_mark:")
+            else:
+                st.error("Leider nicht :x: versuche es gerne weiter")
 
         preview = st.checkbox("Falls du nicht weiter kommst, kannst du hier einen kurzen Blick in die Lösung werfen.")
         if preview:

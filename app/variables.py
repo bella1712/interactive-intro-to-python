@@ -80,13 +80,13 @@ class Variables:
         if options == []:
             st.write("")
         elif len(options)<4:
-            st.write("Bitte benutze alle Elemente aus dem Dropdown um die Variable zu deklarieren")
+            st.error("Bitte benutze alle Elemente aus dem Dropdown um die Variable zu deklarieren")
         else:
             if options == ["programmiersprache", "=", '"',"Python",'"']:
-                st.write("Das stimmt :white_check_mark: Die Deklaration sieht wie folgt aus: ")
-                st.markdown('''```programmiersprache = "Python" ```''')
+                st.success('Das stimmt :white_check_mark: Die Deklaration sieht wie folgt aus: ```programmiersprache = "Python" ```')
+                st.markdown('''''')
             else:
-                st.write("Leider nicht :x: Probiere es weiter.")
+                st.error("Leider nicht :x: Probiere es weiter.")
             sneek_peek=st.checkbox("Falls du dir nicht sicher bist, findest du hier die Lösung")
             if sneek_peek:
                 st.markdown('''Die Lösung ist: ```programmiersprache = "Python" ```''')
@@ -94,24 +94,30 @@ class Variables:
         st.markdown('''#### Übung 2 zur Variablendeklaration :balloon:''')
         st.markdown('''Weise der Variable **zahl** den Wert 7 zu.''')
         declaration= st.text_input("Deklaration")
-        if declaration.split()==["zahl", "=", "7"] or declaration.split()==["zahl=", "7"] or declaration.split()==["zahl", "=7"] or declaration.split()==["zahl=7"]:
-            st.write("Sehr gut, das stimmt :white_check_mark:")
-            st.write("Da du die Deklaration der Variable gemeistert hast, kannst du sie nun auch verändern")
-            self.exercise_3()
-
+        if declaration==None or declaration=="":
+            st.write("")
         else:
-            st.write("Das ist leider nicht korrekt :x: Denke daran, dass Variablen klein geschreiben werden sollten. ")
+            if declaration.split()==["zahl", "=", "7"] or declaration.split()==["zahl=", "7"] or declaration.split()==["zahl", "=7"] or declaration.split()==["zahl=7"]:
+                st.success("Sehr gut, das stimmt :white_check_mark:")
+                st.write("Da du die Deklaration der Variable gemeistert hast, kannst du sie nun auch verändern")
+                self.exercise_3()
+
+            else:
+                st.error("Das ist leider nicht korrekt :x: Denke daran, dass Variablen klein geschreiben werden sollten. ")
     def exercise_3(self):
         st.markdown('''#### Übung 3 zur Variablendeklaration :balloon:''')
         st.markdown('''Addiere nun **13** zu **zahl** hinzu und speichere den neuen Wert auch wieder in der Variable **zahl**''')
         addition=st.text_input("Addition")
-        if addition.split()==["zahl", "=", "zahl", "+", "13"] or addition.split()==["zahl=", "zahl", "+", "13"] or addition.split()==["zahl=zahl", "+", "13"]  or addition.split()==["zahl=" , "zahl", "+", "13"] or addition.split()==["zahl=" , "zahl+", "13"]or addition.split()==["zahl=" , "zahl+13"] or addition.split()==["zahl=zahl", "+", "13"] or addition.split()==["zahl=zahl", "+13"]or addition.split()==["zahl=zahl+", "13"] or  addition.split()==["zahl=zahl+13"] or addition.split()==["zahl", "=", "zahl", "+13"] or addition.split()==["zahl", "=", "zahl+13"] or addition.split()==["zahl", "=zahl+13"] or addition.split()==["zahl", "=", "13", "+", "zahl"] or addition.split()==["zahl=", "13", "+", "zahl"] or addition.split()==["zahl=", "13+", "zahl"] or addition.split()==["zahl=", "13+zahl"]or addition.split()==["zah=13", "+", "zahl"] or addition.split()==["zah=13", "+zahl"]or  addition.split()==["zahl=13+", "zahl"] or addition.split()==["zahl=13+zahl"] or addition.split()==["zahl", "=", "13", "+zahl"] or addition.split()==["zahl", "=", "13+zahl"] or addition.split()==["zahl", "=13+zahl"]or addition.split()==["zahl", "+=" , "13"] or addition.split()==["zahl+=" , "13"] or addition.split()==["zahl+=13"]or addition.split()==["zahl", "+=13"]:
-            st.write("Wow, du lernst echt schnell! Deine Antwort ist richtig :white_check_mark:")
+        if addition == None or addition =="":
+            st.write("")
         else:
-            st.write("Leider falsch :x: Versuche es gerne weiter ")
-        on =st.toggle("Falls du nicht weiter kommst, findest du hier die Lösung")
-        if on:
-            st.markdown('''Die Lösung ist ```zahl = zahl + 13```''')
+            if addition.split()==["zahl", "=", "zahl", "+", "13"] or addition.split()==["zahl=", "zahl", "+", "13"] or addition.split()==["zahl=zahl", "+", "13"]  or addition.split()==["zahl=" , "zahl", "+", "13"] or addition.split()==["zahl=" , "zahl+", "13"]or addition.split()==["zahl=" , "zahl+13"] or addition.split()==["zahl=zahl", "+", "13"] or addition.split()==["zahl=zahl", "+13"]or addition.split()==["zahl=zahl+", "13"] or  addition.split()==["zahl=zahl+13"] or addition.split()==["zahl", "=", "zahl", "+13"] or addition.split()==["zahl", "=", "zahl+13"] or addition.split()==["zahl", "=zahl+13"] or addition.split()==["zahl", "=", "13", "+", "zahl"] or addition.split()==["zahl=", "13", "+", "zahl"] or addition.split()==["zahl=", "13+", "zahl"] or addition.split()==["zahl=", "13+zahl"]or addition.split()==["zah=13", "+", "zahl"] or addition.split()==["zah=13", "+zahl"]or  addition.split()==["zahl=13+", "zahl"] or addition.split()==["zahl=13+zahl"] or addition.split()==["zahl", "=", "13", "+zahl"] or addition.split()==["zahl", "=", "13+zahl"] or addition.split()==["zahl", "=13+zahl"]or addition.split()==["zahl", "+=" , "13"] or addition.split()==["zahl+=" , "13"] or addition.split()==["zahl+=13"]or addition.split()==["zahl", "+=13"]:
+                st.success("Wow, du lernst echt schnell! Deine Antwort ist richtig :white_check_mark:")
+            else:
+                st.error("Leider falsch :x: Versuche es gerne weiter ")
+            on =st.toggle("Falls du nicht weiter kommst, findest du hier die Lösung")
+            if on:
+                st.markdown('''Die Lösung ist ```zahl = zahl + 13```''')
 
     def __main__(self):
         self.display_intro()

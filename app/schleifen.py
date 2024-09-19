@@ -71,8 +71,10 @@ class Schleifen:
     def exercise_1(self):
         st.markdown('''#### Übung zur For-Loop :balloon:''')
         st.markdown(
-            '''Schaue dir an, wie For-Loops funktionieren. Mit diesem interaktiven Codeblock kannst du die Werte so anpassen, wie du es möchtest. Achte aber darauf, dass die Einrückung korrekt sein muss, damit die Schleifen Syntax stimmt. Du kannst die Zahlenrange und den Outputstring gerne verändern. Beobachte was passiert und versuche dir die Struktur zu merken. Wenn du möchtest, dass dein Output sichtbar wird oder bleibt, verwende bitte das ```st.write()``` wie vorgegeben. In einem normalen Programm würdest du hier einfach einen ```print()``` Befehl haben. ''')
+            '''Schaue dir an, wie For-Loops funktionieren. Mit diesem interaktiven Codeblock kannst du die Werte so anpassen, wie du es möchtest. Achte aber darauf, dass die Einrückung korrekt sein muss, damit die Schleifen Syntax stimmt. Du kannst die **Zahlenrange** und den Outputstring gerne verändern. Beobachte was passiert und versuche dir die Struktur zu merken.''')
+        st.markdown('''Wenn du möchtest, dass dein Output sichtbar wird oder bleibt, verwende bitte das ```st.write()``` wie vorgegeben. In einem normalen Programm würdest du hier einfach einen ```print()``` Befehl haben. ''')
         st.write("Sollte etwas schief gehen, dann bekommst du eine Fehlermeldung angezeigt, die dir hilft den Code zu reparieren.")
+
         # Draw an execbox with some initial text.
         execbox("""
         import streamlit as st
@@ -88,9 +90,13 @@ st.write ("i ist gleich: ", i)
             self.exercise_2()
 
     def exercise_2(self):
-        st.write("Ändere gerne die Elemente in der Liste ab und schau was passiert. Du kannst Elemente ändern, hinzufügen oder löschen. ")
+        st.write("Ändere gerne die Elemente in der Liste ab und schau was passiert. Du kannst Elemente **ändern**, **hinzufügen** oder **löschen**. ")
+        st.markdown(
+            '''Falls du eine Unendliche Schleife bekommen solltest, keine Panik: **Lade einfach die Seite neu**. Und solltest du einen Syntax-Fehler machen, dann lass dir wieder durch die Fehlermeldung helfen.''')
         execbox("""
         import streamlit as st
+        
+        
 # Beispiel 2:
 schueler_liste=["Max", "Moritz", "Melanie", "Marta"]
 for schueler in schueler_liste:
@@ -98,7 +104,8 @@ for schueler in schueler_liste:
         """)
     def exercise_3(self):
         st.markdown('''#### Übung zu den While-Loops :balloon:''')
-        st.markdown('''schau dir die While Schleife an und überlege dir, wie sie funktionert. Ändere gerne die Abbruchbedingung ```counter < len(schueler_liste)``` um zu sehen was passiert. Du darfst auch gerne die Rechnung des Counters ```counter += 1``` verändern und schauen was passiert. Falls du eine Unendliche Schleife bekommen solltest, keine Panik: **Lade einfach die Seite neu**. Und solltest du einen Syntax-Fehler machen, dann lass dir wieder durch die Fehlermeldung helfen. ''')
+        st.markdown('''schau dir die While Schleife an und überlege dir, wie sie funktionert. Ändere gerne die **Abbruchbedingung** ```counter < len(schueler_liste)``` um zu sehen was passiert. Du darfst auch gerne die **Rechnung des Counters** ```counter += 1``` verändern und schauen was passiert.''')
+        st.markdown('''Falls du eine Unendliche Schleife bekommen solltest, keine Panik: **Lade einfach die Seite neu**. Und solltest du einen Syntax-Fehler machen, dann lass dir wieder durch die Fehlermeldung helfen. ''')
 
         execbox("""
         import streamlit as st
@@ -114,7 +121,8 @@ st.write("Counter: ", counter)
 
     def exercise_4(self):
         st.markdown('''#### Übung zu den Do-While-Loops :balloon:''')
-        st.markdown('''schau dir die While Schleife an und überlege dir, wie sie funktionert. Ändere gerne die Abbruchbedingung ```counter < listen_laenge``` um zu sehen was passiert. Du darfst auch gerne die Rechnung des Counters ```counter += 1``` verändern und schauen was passiert. Falls du eine Unendliche Schleife bekommen solltest, keine Panik: **Lade einfach die Seite neu**. Und solltest du einen Syntax-Fehler machen, dann lass dir wieder durch die Fehlermeldung helfen.''')
+        st.markdown('''schau dir die While Schleife an und überlege dir, wie sie funktionert. Ändere gerne die **Abbruchbedingung** ```counter < listen_laenge``` um zu sehen was passiert. Du darfst auch gerne die **Rechnung des Counters** ```counter += 1``` verändern und schauen was passiert.''')
+        st.markdown('''Falls du eine Unendliche Schleife bekommen solltest, keine Panik: **Lade einfach die Seite neu**. Und solltest du einen Syntax-Fehler machen, dann lass dir wieder durch die Fehlermeldung helfen.''')
         execbox("""
         import streamlit as st
                         

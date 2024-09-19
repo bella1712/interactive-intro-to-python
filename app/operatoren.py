@@ -53,18 +53,23 @@ class Operatoren:
 
     def exercise_1(self):
         st.markdown('''#### Übung zu den zuweisenden Operatoren :balloon:''')
-        st.markdown('''In dem folgenden Feld kannst du die Werte für a und b beliebig anpassen und auch die Zuweisung im ```st.write()``` Feld beliebig anpassen. Spiele gerne herum und schau dir an, wie sich das Ergebnis verändert. Um das Ergebnis zu sehen, klicke erst auf den Apply- und danach auf den Run-Button. Bitte entferne keinen Code, da es sonst sein kann, dass das Programm nicht mehr funktionert. Ausserdem pass bitte darauf auf, dass alle COdezeilen gleich eingerückt sind. Sollte dennoch etwas schief gehen, nimm dir die Zeit und lies die Fehlermeldung. Sie hilft dir deinen Fehler zu identifizieren und zu beheben.''')
+        st.markdown('''In dem folgenden Feld kannst du die Werte für a und b beliebig anpassen und auch die Zuweisung im ```st.write()``` Feld beliebig anpassen. Ändere die Werte für a, b und die Zuweisende Operation für a und schau dir an, was passiert. Beispiele für die **zuweisende Operation** findest du in der Tabelle über der Übung.''')
+        st.markdown('''Um das Ergebnis zu sehen, klicke erst auf den Apply- und danach auf den Run-Button. Bitte entferne keinen Code, da es sonst sein kann, dass das Programm nicht mehr funktionert. Ausserdem pass bitte darauf auf, dass alle COdezeilen gleich eingerückt sind. Sollte dennoch etwas schief gehen, nimm dir die Zeit und lies die Fehlermeldung. Sie hilft dir deinen Fehler zu identifizieren und zu beheben.''')
         # Draw an execbox with some initial text.
         execbox("""
         import streamlit as st
 a = 10
+st.write("a: ", a )
 b = 20
-st.write("a: ", a ," b: ", b)
+st.write(" b: ", b)
+a = a + b
+st.write("Resultat: ", a)
     """)
 
     def exercise_2(self):
         st.markdown('''#### Übung zu den mathematischen Operatoren :balloon:''')
-        st.markdown('''In dem folgenden Feld kannst du die Werte für a und b beliebig anpassen und auch die Zuweisung im ```st.write()``` Feld beliebig anpassen. Spiele gerne herum und schau dir an, wie sich das Ergebnis verändert. Um das Ergebnis zu sehen, klicke erst auf den Apply- und danach auf den Run-Button. Bitte entferne keinen Code, da es sonst sein kann, dass das Programm nicht mehr funktionert. Ausserdem pass bitte darauf auf, dass alle COdezeilen gleich eingerückt sind. Sollte dennoch etwas schief gehen, nimm dir die Zeit und lies die Fehlermeldung. Sie hilft dir deinen Fehler zu identifizieren und zu beheben.''')
+        st.markdown('''In dem folgenden Feld kannst du die Werte für a und b beliebig anpassen und auch die Zuweisung im ```st.write()``` Feld beliebig anpassen. Ändere die Werte für a, b und die Mathematischen Operatoren. Du findest die Operatoren in der Tabelle über er Übung. Schaue dir an was passiert und versuche die Funktion der Operatoren nachzuvollziehen.''')
+        st.markdown('''Um das Ergebnis zu sehen, klicke erst auf den Apply- und danach auf den Run-Button. Bitte entferne keinen Code, da es sonst sein kann, dass das Programm nicht mehr funktionert. Ausserdem pass bitte darauf auf, dass alle COdezeilen gleich eingerückt sind. Sollte dennoch etwas schief gehen, nimm dir die Zeit und lies die Fehlermeldung. Sie hilft dir deinen Fehler zu identifizieren und zu beheben.''')
         # Draw an execbox with some initial text.
         execbox("""
         import streamlit as st
@@ -78,7 +83,8 @@ st.write("Resultat: ", a+b)
     def exercise_3(self):
         st.markdown('''#### Übung zu den Vergleichsoperatoren :balloon:''')
         st.markdown(
-            '''In dem folgenden Feld kannst du die Werte für a und b beliebig anpassen und auch die Zuweisung im ```st.write()``` Feld beliebig anpassen. Spiele gerne herum und schau dir an, wie sich das Ergebnis verändert. Um das Ergebnis zu sehen, klicke erst auf den Apply- und danach auf den Run-Button. Bitte entferne keinen Code, da es sonst sein kann, dass das Programm nicht mehr funktionert. Ausserdem pass bitte darauf auf, dass alle COdezeilen gleich eingerückt sind. Sollte dennoch etwas schief gehen, nimm dir die Zeit und lies die Fehlermeldung. Sie hilft dir deinen Fehler zu identifizieren und zu beheben. ''')
+            '''In dem folgenden Feld kannst du die Werte für a und b beliebig anpassen und auch die Zuweisung im ```st.write()``` Feld beliebig anpassen. Ändere die Werte von a, b und dem Vergleichsoperatoren und sieh was passiert. Gehe die ganze Liste der Vergleichsoperatoren durch und beobachte das Ergebnis.''')
+        st.markdown('''Um das Ergebnis zu sehen, klicke erst auf den Apply- und danach auf den Run-Button. Bitte entferne keinen Code, da es sonst sein kann, dass das Programm nicht mehr funktionert. Ausserdem pass bitte darauf auf, dass alle COdezeilen gleich eingerückt sind. Sollte dennoch etwas schief gehen, nimm dir die Zeit und lies die Fehlermeldung. Sie hilft dir deinen Fehler zu identifizieren und zu beheben. ''')
         # Draw an execbox with some initial text.
         execbox("""
         import streamlit as st

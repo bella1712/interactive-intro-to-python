@@ -34,17 +34,19 @@ class Kontrollstrukturen:
         # Initial dataframe
         st.markdown('''#### Übung zu den Kontrollstrukturen :balloon:''')
         st.markdown(
-            '''Du findest unten ein funktionierendes Beispiel einer Kontrollstruktur. Spiele damit und mit den verschiedenen Werten herum, um herauszufinden, wie sie funktioniert. Sollte die Syntax nicht mehr korrekt sein, lies die Fehlernachricht und versuche mir ihrer Hilfe den Fehler zu beheben. Sobald du Änderungen am Code vorgenommen hast, klicke auf den Apply- und auf den Run-Button um die Änderung sehen zu können. ''')
+            '''Du findest unten ein funktionierendes Beispiel einer Kontrollstruktur. Ändere den Wert des Namens zu **mehreren Leerzeichen**, **Max** und **deinem eigenen Namen** und sieh was passiert.''')
+        st.write("Sollte die Syntax nicht mehr korrekt sein, lies die Fehlernachricht und versuche mir ihrer Hilfe den Fehler zu beheben. Sobald du Änderungen am Code vorgenommen hast, klicke auf den Apply- und auf den Run-Button um die Änderung sehen zu können.")
 
         execbox("""
         import streamlit as st
 name=""
-if name=="":
+# .strip() entfernt Leerzeichen vor und nach dem Stringd
+if name.strip()=="":
     st.write("Bitte gib der Variable name einen Wert.")
 elif name=="Max":
     st.write("Der name ist Max")
 else: 
-    st.write("Der name ist nicht '' und auch nicht Max.")
+    st.write("Der name ist nicht leer und auch nicht Max. Der Name lautet: ", name)
                         """)
     def __main__(self):
         self.display_intro()
