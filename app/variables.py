@@ -98,7 +98,8 @@ class Variables:
         if declaration==None or declaration=="":
             st.write("")
         else:
-            if declaration.split()==["zahl", "=", "7"] or declaration.split()==["zahl=", "7"] or declaration.split()==["zahl", "=7"] or declaration.split()==["zahl=7"]:
+            pattern= r"zahl\s*=\s*7"
+            if re.match(pattern, declaration):
                 st.success("Sehr gut, das stimmt :white_check_mark:")
                 st.write("Da du die Deklaration der Variable gemeistert hast, kannst du sie nun auch verändern")
                 self.exercise_3()
