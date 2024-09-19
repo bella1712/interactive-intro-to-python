@@ -6,7 +6,7 @@ from operatoren import Operatoren
 from klassen_und_methoden import Klassen_und_Methoden
 from kontrollstrukturen import Kontrollstrukturen
 from schleifen import Schleifen
-from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
+from htbuilder import HtmlElement, div, hr, a, p, img, styles
 from htbuilder.units import percent, px
 
 info = Info()
