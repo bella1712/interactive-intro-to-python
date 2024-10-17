@@ -7,7 +7,7 @@ class Schleifen:
             Angenommen du hast 10 Mitschüler und du wünscht jedem einen guten Morgen. Nun sollst du diese Tätigkeit des Grüssens dokumentieren. Würdest du dann schreiben "Ich habe gesagt 'Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen, Guten Morgen.'"? Nein, oder?
             Du würdest schreiben "Ich habe 10 mal 'Guten Morgen' gesagt."
             In einem Programm musst du allerdings die 10fache Wiederholung durchführen und dafür verwendet man Schleifen: Dadurch ersparst du dir die Arbeit den Schritt mehrfach auszuführen und kannst alles in einer Struktur zusammenfassen.''')
-        st.markdown('''#### For-Loops''')
+        st.markdown('''#### For-Loops :heavy_plus_sign:''')
         st.markdown('''Für die Strukturanpassung für die mehrfachen Wiederholungen verwenden wir Schleifen. Eine sehr bekannte, iterative, also zählende Schleife, ist der For-Loop. Hierbei wir eine Variable definiert, die zum Zählen der Wiederholungen verwendet wird diefiniert. Gleichzeitig wird mit dieser hoch- oder runterzählenden Variable eine Abbruchbedingung definiert. Z.B. solange die Variable kleiner als 10 ist, mache weiter. Beim Programmieren ist das genauso. Das oben genannte Beispiel sieht in Python folgendermassen aus:''')
         st.markdown('''
             ```
@@ -19,7 +19,7 @@ class Schleifen:
         if on_1:
             self.exercise_1()
     def display_info_2(self):
-        st.markdown('''#### While-Loops''')
+        st.markdown('''#### While-Loops :heavy_check_mark:''')
         st.markdown('''Es gibt aber auch andere Möglichkeiten um eine Schleifen zu mache. Wenn du deine Mitschüler vorher zählst, kannst du schauen, wie ob du "Guten Morgen" sagen musst.''')
         st.markdown('''In python würde der Code dann wie folgt aussehen:''')
         st.markdown('''

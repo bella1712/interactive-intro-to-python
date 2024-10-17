@@ -1,4 +1,5 @@
 import streamlit as st
+import re
 class Datentypen:
     def display_intro_teil_1(self):
         st.title("Datentypen :page_facing_up:")
@@ -127,8 +128,63 @@ class Datentypen:
                 string +=(ele + " ")
             st.write("Die Lösung ist: ", string)
 
+    def question_5(self):
+        st.markdown('''#### Übung zu dictionaries :balloon:''')
+        st.markdown('''Ein wichtiger Datentyp in Python ist der Dictionary. Durch ihn können Daten einander zugeordnet werden, ähnlich wie ein echter Dictionaire, der dir ein Wort und eine Erklärung liefert.''')
+        st.markdown('''Erstelle einen Dictionary mit dem Namen ```my_dict``` und gib ihm die Schlüssel ```name```, ```alter``` und ```hobby```. Die Werte sind ```Max```, ```18``` und ```Fussball```. Du kannst die Werte auch austauschen und durch eigene Werte ersetzen.''')
+        input = st.text_input("Eine Variable my_dict vom Typ Dictionary mit den Schlüsseln name, alter und hobby und den Werten Max, 18 und Fussball", "my_dict = ...")
+        pattern_1 = r'^my_dict\s*=\s*dict\(\s*name\s*=\s*"[^"]+"\s*,\s*alter\s*=\s*\d+\s*,\s*hobby\s*=\s*"[^"]+"\s*\)\s*$'
+        pattern_2=r'^my_dict\s*=\s*dict\(\s*name\s*=\s*\'[^\']+\'\s*,\s*alter\s*=\s*\d+\s*,\s*hobby\s*=\s*\'[^\']+\'\s*\)\s*$'
+        pattern_3=r'^my_dict\s*=\s*\{\s*"name"\s*:\s*"[^"]+"\s*,\s*"alter"\s*:\s*\d+\s*,\s*"hobby"\s*:\s*"[^"]+"\s*\}\s*$'
+        pattern_4=r'^my_dict\s*=\s*\{\s*\'name\'\s*:\s*\'[^\']+\'\s*,\s*\'alter\'\s*:\s*\d+\s*,\s*\'hobby\'\s*:\s*\'[^\']+\'\s*\}\s*$'
+
+
+        #if re.match(pattern_one_quotation, input) or re.match(pattern_two_quotations, input):
+        if input=="" or input == "my_dict = ...":
+            st.write("")
+        else:
+            if re.match(pattern_1,input)or re.match(pattern_2, input) or re.match(pattern_3, input) or re.match(pattern_4, input):
+                st.success("Sehr gut, das stimmt :white_check_mark:")
+                st.write("Super, da du jetzt weisst, wie man einen Dictionary erstellt, siehst du hier noch, wie man auf die Elemente zugreift und sie gegebenenfalls verändern kann:")
+                st.markdown('''
+                ```
+                # Deklaration des dictionary
+                my_dict = dict(name = "Max", alter = 18, hobby = "Fussball")
+                
+                # Um auf das Element mit dem Schlüssel "name" zuzugreifen: 
+                name= my_dict.get("name")
+                print(name)
+                # Output: Max
+                
+                # Um alle Schlüssel (keys) zu erhalten: 
+                keys = my_dict.keys()
+                print(keys)
+                #Output: dict_keys(['name', 'alter', 'hobby'])
+                
+                # Um auf alle Werte sehen zu können: 
+                values = my_dict.values()
+                print(values)
+                #Output: dict_values(['Max', 18, 'Fussball'])
+                
+                # Um alle Items des Dictionary zu sehen: 
+                items= my_dict.items()
+                print(intems)
+                #Output: dict_items([('name', 'Max'), ('alter', 18), ('hobby', 'Fussball')])
+                
+                # Um ein neues Schlüsses-Werte-Paar (key-value pair) hinzuzufügen:
+                my_dict["lieblingsfarbe"] = "gelb"
+                print(my_dict)
+                #Output: {'name' : 'Max', 'alter' : 18, 'hobby' : 'Fussball', 'lieblingsfarbe' : 'gelb'}                
+                ```
+                ''')
+
+            else:
+                st.error("Das ist leider nicht korrekt :x:. Versuche es erneut. Falls du Hilfe brauchst, kannst du gerne googlen oder dir folgenden [Link](https://www.w3schools.com/python/python_dictionaries.asp) anschauen ")
+
+
     def exercise_2(self):
         self.question_4()
+        self.question_5()
 
     def __main__(self):
         self.display_intro_teil_1()

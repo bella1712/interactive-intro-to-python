@@ -6,8 +6,10 @@ from operatoren import Operatoren
 from klassen_und_methoden import Klassen_und_Methoden
 from kontrollstrukturen import Kontrollstrukturen
 from schleifen import Schleifen
+from applikationsaufbau_und_deployment import Applikationsaufbau_und_deployment
 from htbuilder import HtmlElement, div, hr, a, p, img, styles
 from htbuilder.units import percent, px
+
 
 info = Info()
 variables =Variables()
@@ -16,6 +18,7 @@ operatoren =Operatoren()
 klassen_und_methoden = Klassen_und_Methoden()
 kontrollstrukturen =Kontrollstrukturen()
 schleifen = Schleifen()
+app = Applikationsaufbau_und_deployment()
 st.set_page_config(page_title="Python für Anfänger", layout="centered", initial_sidebar_state="expanded")
 
 # Hide the default footer
@@ -114,6 +117,7 @@ page_names_to_funcs = {
     "Kontrollstrukturen":kontrollstrukturen.__main__,
     "Schleifen":schleifen.__main__,
     "Klassen und Methoden":klassen_und_methoden.__main__,
+    "Applikationsaufbau und Deployment": app.__main__,
 
 
 
